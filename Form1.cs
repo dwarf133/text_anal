@@ -17,5 +17,12 @@ namespace text_anal
             InitializeComponent();
         }
 
+        private void butOpenCode_Click(object sender, EventArgs e)
+        {
+            string fileName = "";
+            openFileDialogCode.ShowDialog();
+            if (openFileDialogCode.CheckFileExists) fileName = openFileDialogCode.FileName;
+            openFileDialogCode.OpenFile()
+        }
     }
 }
